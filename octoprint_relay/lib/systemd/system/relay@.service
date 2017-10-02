@@ -1,0 +1,11 @@
+[Unit]
+Description=Relay Listener Control Service for relay %I
+After=rc.local.service
+
+[Service]
+ExecStart=/home/pi/startRelay.sh %i
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=multi-user.target
